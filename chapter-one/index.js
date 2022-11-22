@@ -2,10 +2,14 @@ const invoices = require('./database/invoices.json');
 const plays = require('./database/plays.json');
 
 
+function playFor(aPerformance) {
+  return plays[aPerformance.playID];
+}
+
 function amountFor(aPerformance, play) {
   let result = 0
 
-  switch (play.type) {
+  switch (playFor(aPerformance).type) {
     case "tragedy":
       result = 40000;
       if (aPerformance.audience > 30) {
@@ -20,15 +24,12 @@ function amountFor(aPerformance, play) {
       result += 300 * aPerformance.audience;
       break;
     default:
-      throw new Error(`unknown type: ${play.type}`);
+      throw new Error(`unknown type: ${playFor(aPerformance).type}`);
   }
   
   return result;
 }
 
-function playFor(aPerformance) {
-  return plays[aPerformance.playID];
-}
 function statement(invoice, plays) {
   let totalAmount = 0;
   let volumeCredits = 0;
