@@ -40,16 +40,14 @@ function statement(invoice, plays) {
 
 
   for (let perf of invoice[0].performances) {
-    let thisAmount = amountFor(perf);
-
     //soma creditos por volume
     volumeCredits += Math.max(perf.audience - 30, 0);
     // soma um credito extra para cada dez espectadores de comedia
     if ("comedy" === playFor(perf).type) volumeCredits += Math.floor(perf.audience / 5);
 
     // exibe a linha para esta requisicao
-    result += ` ${playFor(perf).name}: ${format(thisAmount/100)} (${perf.audience} seats)\n`;
-    totalAmount += thisAmount;
+    result += ` ${playFor(perf).name}: ${format(amountFor(perf)/100)} (${perf.audience} seats)\n`;
+    totalAmount += amountFor(perf);
   }
 
   result += `Amount owed is ${format(totalAmount/100)}\n`;
