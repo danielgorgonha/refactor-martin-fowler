@@ -1,15 +1,15 @@
-<h1 align="center">🚀 <b>Livro Refatoração</b> de <b>Martin Fowler</b><br/> com contribuições de <b>KenT Beck</b></h1>
+<h1 align="center"><b>Livro Refatoração</b> de <b>Martin Fowler</b><br/> com contribuições de <b>KenT Beck</b></h1>
 <p align="center">
   
   <br>
 </p>
-<h1 align="center">:pushpin: Introdução</h1>
+<h1 align="center">Introdução</h1>
 <p align="left">
   Aperfeiçoando o design de códigos existentes
 
   <br/>
 
-<h1 align="center">:pushpin: Algumas das tecnologias utilizadas</h1>
+<h1 align="center">Algumas das tecnologias utilizadas</h1>
 <p align="center">
   Abaixo estão algumas das tecnologias utilizadas durante o desenvolvimento.
 </p>
@@ -35,7 +35,7 @@
 > cd refactor-martin-fowler
 ```
 
-### Execução do projeto "chapter-one"
+### :pushpin: Execução do projeto "chapter-one"
 
 
 - Execute o arquivo no terminal da seguinte forma
